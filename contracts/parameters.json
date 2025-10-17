@@ -1,0 +1,18 @@
+{
+  "MultisigManagedToken": {
+    "voters": [
+      "0xe45312c6DFf0C3a842FE41b83415752bC5aE10de",
+      "0xC7CD26f0a37De2fb46282cAF56011C8C4A605581",
+      "0xc073b95E387ceF9EC57f3C3f1332B7214263935e",
+      "0x774752127DBc6476C2D66110e5a7aCF2e765E859",
+      "0x36932Ffc8a10E644a7c1A64C2b73e6732b741B14",
+      "0x2D67754F409983b0931Ff4c113545F4fFa7b442D"
+      
+    ],
+    "supplier": "0x69B19E82aBF3FdF483D509d34685F35641CefB80",
+    "initialSupply": 1111111111111111,
+    "name": "MEPE",
+    "symbol": "MEPE",
+    "decimals": 6
+  }
+}

@@ -1,0 +1,72 @@
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: {
+    compilers: [
+      {
+        version: "0.8.30",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 15000
+          },
+          evmVersion: "cancun"
+        }
+      }
+    ]
+  },
+  networks: {
+    mainnet: {
+      url: vars.get("MAINNET_GATEWAY_URL"),
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    arbitrumOne: {
+      url: "https://arb1.arbitrum.io/rpc",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    avalancheMain: {
+      url: "https://api.avax.network/ext/bc/C/rpc",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    polygonMain: {
+      url: "https://polygon-bor-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    optimismMain: {
+      url: "https://optimism-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    baseMain: {
+      url: "https://base-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    bnbSmartChainMain: {
+      url: "https://bsc-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    opBnbMain: {
+      url: "https://opbnb-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    flowMain: {
+      url: "https://mainnet.evm.nodes.onflow.org",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    apeMain: {
+      url: "https://rpc.apechain.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    soleniumMain: {
+      url: "https://rpc.soneium.org",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+    beraMain: {
+      url: "https://berachain-rpc.publicnode.com",
+      accounts: [vars.get("MAINNET_ACCOUNT_PRIVATE_KEY")],
+    },
+  },
+  etherscan: {
+    apiKey: vars.get("ETHERSCAN_API_KEY"),
+  },
+};
